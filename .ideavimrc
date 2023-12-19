@@ -39,8 +39,15 @@ nnoremap ]q :<C-u>action GotoNextError<CR>
 nnoremap fr gT " 前のタブに移動
 nnoremap ju gt " 次のタブに移動
 nnoremap jy <C-w>w " 分割ウインドウ間の移動
-nnoremap <SPACE>o <C-o> " ジャンプ前に戻る
-nnoremap <SPACE>i <C-i> " ジャンプ後に進む
+nnoremap <SPACE>b <C-o> " ジャンプ前に戻る
+nnoremap <SPACE>f <C-i> " ジャンプ後に進む
+
+set clipboard+=unnamed " yank をクリップボードにコピー
+nnmap <Leader>k <Action>(ShowHoverInfo)　" ホバー表示
+
+let mapleader = ' '
+nnoremap <Leader>ev :<C-u>vsplit ~/.ideavimrc<CR>
+nnoremap <Leader>sv :<C-u>source ~/.ideavimrc<CR>
 
 " gt 隣の tab
 " gT 前の tab
