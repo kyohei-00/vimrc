@@ -1,7 +1,8 @@
 " .ideavimrc is a configuration file for IdeaVim plugin. It uses
-" the same commands as the original .vimrc configuration.
+"   the same commands as the original .vimrc configuration.
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
+
 
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
@@ -20,6 +21,7 @@ map Q gq
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
+
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
@@ -42,18 +44,21 @@ nnoremap jy <C-w>w " 分割ウインドウ間の移動
 nnoremap <SPACE>b <C-o> " ジャンプ前に戻る
 nnoremap <SPACE>f <C-i> " ジャンプ後に進む
 
-set clipboard+=unnamed " yank をクリップボードにコピー
-nnmap <Leader>k <Action>(ShowHoverInfo)　" ホバー表示
+set clipboard+=unnamed " yankをクリップボードにコピー
+
+:map cpp <Action>(CopyPathFromRepositoryRootProvider)
+
 
 let mapleader = ' '
 nnoremap <Leader>ev :<C-u>vsplit ~/.ideavimrc<CR>
 nnoremap <Leader>sv :<C-u>source ~/.ideavimrc<CR>
 
-" gt 隣の tab
-" gT 前の tab
+" gt 隣のtab
+" gT 前のtab
 " <C-w>h 左のウィンドウ
 " <C-w>j 下のウィンドウ
 
-" :actionlist で全てのアクションを表示
+
+" :actionlistで全てのアクションを表示
 " actionlist link
 " https://docs.google.com/spreadsheets/d/17GvVbsLc48iM-vpKgBTwz5ByvsMmmw0dqIenzemDcXM/edit#gid=0
