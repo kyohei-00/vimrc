@@ -43,10 +43,12 @@ nnoremap ju gt " 次のタブに移動
 nnoremap jy <C-w>w " 分割ウインドウ間の移動
 nnoremap <SPACE>b <C-o> " ジャンプ前に戻る
 nnoremap <SPACE>f <C-i> " ジャンプ後に進む
+nnoremap <SPACE>sp :vs<CR>
 
 set clipboard+=unnamed " yankをクリップボードにコピー
 
-:map cpp <Action>(CopyPathFromRepositoryRootProvider)
+:map <SPACE>cp <Action>(CopyPathFromRepositoryRootProvider)
+:map <SPACE>br <Action>(Git.Branches)
 
 
 let mapleader = ' '
