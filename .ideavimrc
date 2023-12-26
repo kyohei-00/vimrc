@@ -49,6 +49,7 @@ set clipboard+=unnamed " yankをクリップボードにコピー
 
 :map <SPACE>cp <Action>(CopyPathFromRepositoryRootProvider)
 :map <SPACE>br <Action>(Git.Branches)
+:map <SPACE>k <Action>(ShowHoverInfo)
 
 
 let mapleader = ' '
